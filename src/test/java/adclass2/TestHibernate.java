@@ -7,6 +7,7 @@ import javax.persistence.Persistence;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import br.com.fgv.dao.UsuarioDAO;
+import br.com.fgv.dao.UsuarioDAOJPA;
 import br.com.fgv.entidade.Usuario;
 
 public class TestHibernate {
@@ -24,7 +25,7 @@ public class TestHibernate {
 		usu.setNome("asdasdr");
 		usu.setLogin("clebiru");
 		usu.setSenha("77384");
-		UsuarioDAO usuDAO = new UsuarioDAO(em);
+		UsuarioDAO usuDAO = new UsuarioDAOJPA(em);
 		//usuDAO.salvar(usu);
 		//Usuario usuMod = usuDAO.buscarPorId(2);
 		//usuMod.setLogin("outro");
